@@ -1,0 +1,26 @@
+c ____OPTILOG_TASK____: /home/aleixsegura/Desktop/search/layouts/openMaze.lay
+c ____OPTILOG_SOLVER____: dfs
+c ____OPTILOG_SLOTS____: 1
+c ____OPTILOG_SEED____: 1
+c ____OPTILOG_CWD____: /home/aleixsegura/Desktop/search
+c ____OPTILOG_CONSTRAINT_h_wall_time____: None
+c ____OPTILOG_CONSTRAINT_h_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_h_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_h_real_memory____: None
+c ____OPTILOG_CONSTRAINT_s_wall_time____: 30
+c ____OPTILOG_CONSTRAINT_s_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_s_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_s_real_memory____: 1024
+c STARTING TIME 1698700047246 
+c OPTILOG SOLVER OBJ <optilog.blackbox.bb.SystemBlackBox object at 0x7f808d580bb0> 
+2.69/0.30	[SearchAgent] using function dfs
+2.69/0.30	[SearchAgent] using problem type PositionSearchProblem
+2.69/0.30	Path found with total cost of 158 in 0.0 seconds
+2.69/0.30	Search nodes expanded: 315
+2.69/0.30	Pacman emerges victorious! Score: 352
+2.69/0.30	Average Score: 352.0
+2.69/0.30	Scores:        352.0
+2.69/0.30	Win Rate:      1/1 (1.00)
+2.69/0.30	Record:        Win
+
+c OPTILOG END 

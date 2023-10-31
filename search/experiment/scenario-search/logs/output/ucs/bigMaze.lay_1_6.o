@@ -1,0 +1,26 @@
+c ____OPTILOG_TASK____: /home/aleixsegura/Desktop/search/layouts/bigMaze.lay
+c ____OPTILOG_SOLVER____: ucs
+c ____OPTILOG_SLOTS____: 1
+c ____OPTILOG_SEED____: 1
+c ____OPTILOG_CWD____: /home/aleixsegura/Desktop/search
+c ____OPTILOG_CONSTRAINT_h_wall_time____: None
+c ____OPTILOG_CONSTRAINT_h_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_h_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_h_real_memory____: None
+c ____OPTILOG_CONSTRAINT_s_wall_time____: 30
+c ____OPTILOG_CONSTRAINT_s_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_s_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_s_real_memory____: 1024
+c STARTING TIME 1698700053727 
+c OPTILOG SOLVER OBJ <optilog.blackbox.bb.SystemBlackBox object at 0x7f26304f4c10> 
+2.70/0.34	[SearchAgent] using function ucs
+2.70/0.34	[SearchAgent] using problem type PositionSearchProblem
+2.70/0.34	Path found with total cost of 210 in 0.0 seconds
+2.70/0.34	Search nodes expanded: 620
+2.70/0.34	Pacman emerges victorious! Score: 300
+2.70/0.34	Average Score: 300.0
+2.70/0.34	Scores:        300.0
+2.70/0.34	Win Rate:      1/1 (1.00)
+2.70/0.34	Record:        Win
+
+c OPTILOG END 

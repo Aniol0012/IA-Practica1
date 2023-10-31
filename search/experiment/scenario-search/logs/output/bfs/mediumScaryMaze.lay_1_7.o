@@ -1,0 +1,26 @@
+c ____OPTILOG_TASK____: /home/aleixsegura/Desktop/search/layouts/mediumScaryMaze.lay
+c ____OPTILOG_SOLVER____: bfs
+c ____OPTILOG_SLOTS____: 1
+c ____OPTILOG_SEED____: 1
+c ____OPTILOG_CWD____: /home/aleixsegura/Desktop/search
+c ____OPTILOG_CONSTRAINT_h_wall_time____: None
+c ____OPTILOG_CONSTRAINT_h_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_h_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_h_real_memory____: None
+c ____OPTILOG_CONSTRAINT_s_wall_time____: 30
+c ____OPTILOG_CONSTRAINT_s_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_s_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_s_real_memory____: 1024
+c STARTING TIME 1698700055675 
+c OPTILOG SOLVER OBJ <optilog.blackbox.bb.SystemBlackBox object at 0x7ff1c848a680> 
+2.60/0.27	[SearchAgent] using function bfs
+2.60/0.27	[SearchAgent] using problem type PositionSearchProblem
+2.60/0.27	Path found with total cost of 72 in 0.0 seconds
+2.60/0.27	Search nodes expanded: 275
+2.60/0.27	Pacman died! Score: -515
+2.60/0.27	Average Score: -515.0
+2.60/0.27	Scores:        -515.0
+2.60/0.27	Win Rate:      0/1 (0.00)
+2.60/0.27	Record:        Loss
+
+c OPTILOG END 

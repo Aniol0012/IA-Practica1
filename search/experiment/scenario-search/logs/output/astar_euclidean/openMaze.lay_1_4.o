@@ -1,0 +1,26 @@
+c ____OPTILOG_TASK____: /home/aleixsegura/Desktop/search/layouts/openMaze.lay
+c ____OPTILOG_SOLVER____: astar_euclidean
+c ____OPTILOG_SLOTS____: 1
+c ____OPTILOG_SEED____: 1
+c ____OPTILOG_CWD____: /home/aleixsegura/Desktop/search
+c ____OPTILOG_CONSTRAINT_h_wall_time____: None
+c ____OPTILOG_CONSTRAINT_h_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_h_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_h_real_memory____: None
+c ____OPTILOG_CONSTRAINT_s_wall_time____: 30
+c ____OPTILOG_CONSTRAINT_s_cpu_time____: None
+c ____OPTILOG_CONSTRAINT_s_virtual_memory____: None
+c ____OPTILOG_CONSTRAINT_s_real_memory____: 1024
+c STARTING TIME 1698700048426 
+c OPTILOG SOLVER OBJ <optilog.blackbox.bb.SystemBlackBox object at 0x7fb3328f8ee0> 
+2.60/0.26	[SearchAgent] using function astar and heuristic euclideanHeuristic
+2.60/0.26	[SearchAgent] using problem type PositionSearchProblem
+2.60/0.26	Path found with total cost of 54 in 0.0 seconds
+2.60/0.26	Search nodes expanded: 550
+2.60/0.26	Pacman emerges victorious! Score: 456
+2.60/0.26	Average Score: 456.0
+2.60/0.26	Scores:        456.0
+2.60/0.26	Win Rate:      1/1 (1.00)
+2.60/0.26	Record:        Win
+
+c OPTILOG END 
