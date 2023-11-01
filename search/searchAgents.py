@@ -396,24 +396,24 @@ def cornersHeuristic(state: Any, problem: CornersProblem):
         distances.append(util.manhattanDistance(current_pos, corner))
 
     min_distance = min(distances)
-    nearest_corner_index = distances.index(min_distance)
-    nearest_corner = corners_not_visited[nearest_corner_index]
+    closest_corner_index = distances.index(min_distance)
+    closest_corner = corners_not_visited[closest_corner_index]
 
     # Calculates the accumulated distance from the closest corner to all remaining not visited corners
     remaining_corners = []
     for corner in corners_not_visited:
-        if corner != nearest_corner:
+        if corner != closest_corner:
             remaining_corners.append(corner)
 
     heuristic = min_distance
     while len(remaining_corners) > 0:
         distances = []
         for corner in remaining_corners:
-            distances.append(util.manhattanDistance(nearest_corner, corner))
+            distances.append(util.manhattanDistance(closest_corner, corner))
 
         min_distance = min(distances)
-        nearest_corner_index = distances.index(min_distance)
-        nearest_corner = remaining_corners.pop(nearest_corner_index)
+        closest_corner_index = distances.index(min_distance)
+        closest_corner = remaining_corners.pop(closest_corner_index)
         heuristic += min_distance
     return heuristic
 
@@ -521,9 +521,6 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
         return 0
 
     heuristic = 0
-    food_list = list(foodGrid)
-
-    heuristic = 0
     foodList = list(foodGrid)
 
     # Find the minimum distance to the nearest food
@@ -532,23 +529,23 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
         distance = util.manhattanDistance(position, food)
         if distance < min_distance:
             min_distance = distance
-            nearest_food = food
+            closest_food = food
 
     heuristic += min_distance
-    foodList.remove(nearest_food)
+    foodList.remove(closest_food)
 
     # For each remaining food, find the distance from the nearest food
     while len(foodList) > 0:
         min_distance = float('inf')
         for food in foodList:
-            distance = util.manhattanDistance(nearest_food, food)
+            distance = util.manhattanDistance(closest_food, food)
             if distance < min_distance:
                 min_distance = distance
-                new_nearest_food = food
+                new_closest_food = food
 
         heuristic += min_distance
-        nearest_food = new_nearest_food
-        foodList.remove(new_nearest_food)
+        closest_food = new_closest_food
+        foodList.remove(new_closest_food)
     return heuristic
 
 class ClosestDotSearchAgent(SearchAgent):
