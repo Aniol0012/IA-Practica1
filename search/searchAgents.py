@@ -512,14 +512,14 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
     Subsequent calls to this heuristic can access
     problem.heuristicInfo['wallCount']
     """
-    position, foodGrid = state
+    position, food_grid = state
 
     # Implementation
-    if len(list(foodGrid)) == 0:
+    if len(list(food_grid)) == 0:
         return 0
 
     food_heuristic = 0
-    foodList = list(foodGrid)
+    foodList = list(food_grid)
 
     # Find the minimum distance to the nearest food
     min_distance = float('inf')
