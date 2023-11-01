@@ -1,4 +1,4 @@
 sudo apt install expect task-spooler
 sudo apt install python3-pandas
-sudo apt install pip
+sudo apt install python3-pip
 pip3 install optilog

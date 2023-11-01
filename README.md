@@ -1,13 +1,20 @@
 # IA-Practica-1
 
 ## Description
-This repository is made to develop some implementations of search algorithms for PacMan game. This implementations can be found in [search.py](search/search.py).
+This repository is made to develop some implementations of search algorithms for PacMan game. These implementations can be found in [search.py](search/search.py).
 The heuristics implementation can be found in [searchAgents.py](search/searchAgents.py) file. <br>
 You can also check the [report](report.pdf) made for more information.
 
-# Requirements
+## Installation
+Clone the repo:
 
-The requirements can be found in [requirements.txt](requirements.txt) file. But you can also install it manually:
+```shell
+git clone https://github.com/Aniol0012/IA-Practica1.git
+```
+
+## Requirements
+
+The requirements can be found in [requirements](requirements.txt) file. But you can also install it manually:
 
 ```shell
 sudo apt install expect task-spooler
@@ -17,15 +24,15 @@ sudo apt install python3-pandas
 ````
 
 ````shell
-sudo apt install pip
+sudo apt install python3-pip
 ````
 
 ````shell
 pip3 install optilog
 ````
-Note: If optilog is not working, try to reboot.
+Note: If optilog is not working, try to reboot or check its [documentation](http://hardlog.udl.cat/static/doc/optilog/html/index.html).
 
-## Run
+## Run search algorithms
 
 To run this project go to the [search](search) directory:
 
@@ -39,10 +46,10 @@ And then give permissions to all shell scripts:
 chmod +x experiment/runsolver experiment/*.sh experiment/algs/*.sh
 ````
 
-Then run the experiment:
+Then run all the algorithms:
 
 ````shell
-optilog-runnig experiment/scenario-search submit
+optilog-running experiment/scenario-search submit
 ````
 Note: If this command is done more than 1 time, add `--overwrite` at the end of the previous command.
 
@@ -50,7 +57,7 @@ Note: If this command is done more than 1 time, add `--overwrite` at the end of 
 tsp
 ````
 
-You can also run the [experiment.py](search/experiment/experiment.py) file:
+You can also run the [experiment](search/experiment/experiment.py) file:
 
 ````shell
 python3 experiment/experiment.py
@@ -59,7 +66,7 @@ python3 experiment/experiment.py
 Note: All the system path to [search](search) directory must not contain any spaces at all, otherwise the project might not work.
 
 ## Run heuristics
-To run the implemented heuristics `cornersHeuristic` and `foodHeuristic` can be done with these commands:
+To run the implemented heuristics `cornersHeuristic` and `foodHeuristic` can be run with these commands:
 
 - **cornersHeuristic**:
 ```shell
