@@ -71,6 +71,15 @@ python3 experiment/experiment.py
 
 Note: All the system path to [search](search) directory must not contain any spaces at all, otherwise the project might not work.
 
+## Run pacman
+To run pacman vanilla use this command:
+
+````shell
+python3 pacman.py
+````
+
+Note: Use `-h` parameter to show help panel. You can also check some examples in [commands](search/commands.txt) file.
+
 ## Run heuristics
 To run the implemented heuristics `cornersHeuristic` and `foodHeuristic` can be run with these commands:
 
