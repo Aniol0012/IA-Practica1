@@ -14,7 +14,13 @@ git clone https://github.com/Aniol0012/IA-Practica1.git
 
 ## Requirements
 
-The requirements can be found in [requirements](requirements.txt) file. But you can also install it manually:
+The requirements can be found in [requirements](requirements.txt) file. Use this command to install them all:
+
+````shell
+pip install -r requirements.txt
+````
+
+You can also install them manually:
 
 ```shell
 sudo apt install expect task-spooler
