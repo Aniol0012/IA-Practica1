@@ -103,19 +103,21 @@ def depthFirstSearch(problem: SearchProblem):
 
         for s, a, c in problem.getSuccessors(node.state):
             if hasNotBeenExpanded(s, expanded) and s not in getFringeStates(fringe.list):
-                next_node = Node(state=s, 
-                                action=a, 
-                                cost=node.cost + c, 
-                                parent=node
-                                )
+                next_node = Node(state=s,
+                                 action=a,
+                                 cost=node.cost + c,
+                                 parent=node
+                                 )
                 if problem.isGoalState(next_node.state):
                     return next_node.get_actions_from_root()
                 fringe.push(next_node)
 
     raise Exception("No solution.")
 
+
 def getFringeStates(fringe):
     return [node.state for node in fringe]
+
 
 def breadthFirstSearch(problem: SearchProblem):
     """Search the shallowest nodes in the search tree first."""
@@ -133,16 +135,17 @@ def breadthFirstSearch(problem: SearchProblem):
 
         for s, a, c in problem.getSuccessors(node.state):
             if hasNotBeenExpanded(s, expanded) and s not in getFringeStates(fringe.list):
-                next_node = Node(state=s, 
-                                action=a, 
-                                cost=node.cost + c, 
-                                parent=node
-                                )
+                next_node = Node(state=s,
+                                 action=a,
+                                 cost=node.cost + c,
+                                 parent=node
+                                 )
                 if (problem.isGoalState(next_node.state)):
                     return next_node.get_actions_from_root()
                 fringe.push(next_node)
 
     raise Exception("No solution.")
+
 
 def uniformCostSearch(problem: SearchProblem):
     """Search the node of least total cost first."""
@@ -155,23 +158,24 @@ def uniformCostSearch(problem: SearchProblem):
         node = fringe.pop()
         if problem.isGoalState(node.state):
             return node.get_actions_from_root()
-        
+
         if hasNotBeenExpanded(node.state, expanded):
             expanded.add(node.state)
             for s, a, c in problem.getSuccessors(node.state):
-                next_node = Node(state=s, 
-                                action=a, 
-                                cost=node.cost + c, 
-                                parent=node
-                            )
+                next_node = Node(state=s,
+                                 action=a,
+                                 cost=node.cost + c,
+                                 parent=node
+                                 )
                 if hasNotBeenExpanded(s, expanded):
                     fringe.update(next_node, next_node.cost)
-        
+
     raise Exception("No solution")
 
 
 def hasNotBeenExpanded(node_state, expanded):
     return node_state not in expanded
+
 
 def nullHeuristic(state, problem=None):
     """
@@ -179,7 +183,6 @@ def nullHeuristic(state, problem=None):
     goal in the provided SearchProblem.  This heuristic is trivial.
     """
     return 0
-
 
 
 def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic):
@@ -193,19 +196,20 @@ def aStarSearch(problem: SearchProblem, heuristic=nullHeuristic):
         node = fringe.pop()
         if problem.isGoalState(node.state):
             return node.get_actions_from_root()
-        
+
         if hasNotBeenExpanded(node.state, expanded):
             expanded.add(node.state)
             for s, a, c in problem.getSuccessors(node.state):
-                next_node = Node(state=s, 
-                                action=a, 
-                                cost=node.cost + c, 
-                                parent=node
-                            )
+                next_node = Node(state=s,
+                                 action=a,
+                                 cost=node.cost + c,
+                                 parent=node
+                                 )
                 if hasNotBeenExpanded(next_node, expanded):
                     fringe.push(next_node, next_node.cost + heuristic(next_node.state, problem))
-    
+
     raise Exception("No solution")
+
 
 # Abbreviations
 bfs = breadthFirstSearch
