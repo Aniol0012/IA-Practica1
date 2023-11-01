@@ -396,8 +396,7 @@ def cornersHeuristic(state: Any, problem: CornersProblem):
         distances.append(util.manhattanDistance(current_pos, corner))
 
     min_distance = min(distances)
-    closest_corner_index = distances.index(min_distance)
-    closest_corner = corners_not_visited[closest_corner_index]
+    closest_corner = corners_not_visited[distances.index(min_distance)]
 
     # Calculates the accumulated distance from the closest corner to all remaining not visited corners
     remaining_corners = []
@@ -412,8 +411,7 @@ def cornersHeuristic(state: Any, problem: CornersProblem):
             distances.append(util.manhattanDistance(closest_corner, corner))
 
         min_distance = min(distances)
-        closest_corner_index = distances.index(min_distance)
-        closest_corner = remaining_corners.pop(closest_corner_index)
+        closest_corner = remaining_corners.pop(distances.index(min_distance))
         heuristic += min_distance
     return heuristic
 
