@@ -515,27 +515,29 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
     position, food_grid = state
 
     # Implementation
-    if len(list(food_grid)) == 0:
+    heuristic_factor = 1 / 2
+    food_grid_list = food_grid.asList()
+
+    if len(food_grid_list) == 0:
         return 0
 
     food_heuristic = 0
-    food_list = list(food_grid)
 
     # Find the minimum distance to the nearest food
     min_distance = float('inf')
-    for food in food_list:
+    for food in food_grid_list:
         distance = util.manhattanDistance(position, food)
         if distance < min_distance:
             min_distance = distance
             closest_food = food
 
     food_heuristic += min_distance
-    food_list.remove(closest_food)
+    food_grid_list.remove(closest_food)
 
     # For each remaining food, find the distance from the nearest food
-    while len(food_list) > 0:
+    while len(food_grid_list) > 0:
         min_distance = float('inf')
-        for food in food_list:
+        for food in food_grid_list:
             distance = util.manhattanDistance(closest_food, food)
             if distance < min_distance:
                 min_distance = distance
@@ -543,8 +545,8 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
 
         food_heuristic += min_distance
         closest_food = new_closest_food
-        food_list.remove(new_closest_food)
-    return food_heuristic
+        food_grid_list.remove(new_closest_food)
+    return food_heuristic * heuristic_factor
 
 
 class ClosestDotSearchAgent(SearchAgent):
