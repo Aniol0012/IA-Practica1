@@ -33,7 +33,7 @@ description for details.
 
 Good luck and happy searching!
 """
-
+import math
 from typing import List, Tuple, Any
 from game import Directions
 from game import Agent
@@ -515,47 +515,18 @@ def foodHeuristic(state: Tuple[Tuple, List[List]], problem: FoodSearchProblem):
     position, food_grid = state
 
     # Implementation
-    heuristic_factor = 1 / 2
     food_list = food_grid.asList()
 
     if len(food_list) == 0:
         return 0
-    """
 
-    food_heuristic = 0
-
-    # Find the minimum distance to the nearest food
-    min_distance = float('inf')
+    biggest_distance = 0
     for food in food_list:
-        distance = util.manhattanDistance(position, food)
-        if distance < min_distance:
-            min_distance = distance
-            closest_food = food
+        food_distance = util.manhattanDistance(position, food)
+        if food_distance > biggest_distance:
+            biggest_distance = food_distance
 
-    food_heuristic += min_distance
-    food_list.remove(closest_food)
-
-    # For each remaining food, find the distance from the nearest food
-    while len(food_list) > 0:
-        min_distance = float('inf')
-        for food in food_list:
-            distance = util.manhattanDistance(closest_food, food)
-            if distance < min_distance:
-                min_distance = distance
-                new_closest_food = food
-
-        food_heuristic += min_distance
-        closest_food = new_closest_food
-        food_list.remove(new_closest_food)
-    return food_heuristic * heuristic_factor
-    """
-    distances = set()
-    for food in food_list:
-        distance = util.manhattanDistance(position, food)
-        distances.add(distance)
-
-    max_distance = max(distances)
-    return max_distance
+    return biggest_distance
 
 
 class ClosestDotSearchAgent(SearchAgent):
