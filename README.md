@@ -3,7 +3,7 @@
 ## Description
 This repository is made to develop some implementations of search algorithms for PacMan game. These implementations can be found in [search.py](search/search.py).
 The heuristics implementation can be found in [searchAgents.py](search/searchAgents.py) file. <br>
-You can also check the [report](report.pdf) made for more information. In case you want more explanation, there's also an [extended version](extended_report.pdf) of the report
+You can also check the [report](report.pdf) made for more information. In case you want more explanation, there's also an [extended version](extended_report.pdf) of the report.
 
 ## Installation
 Clone the repo:
